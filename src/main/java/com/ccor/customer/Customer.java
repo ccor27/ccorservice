@@ -8,10 +8,10 @@ import lombok.NoArgsConstructor;
 import javax.persistence.*;
 
 @Data
-@Entity
+@Builder
 @AllArgsConstructor
 @NoArgsConstructor
-@Builder
+@Entity
 public class Customer {
 
     @SequenceGenerator(
