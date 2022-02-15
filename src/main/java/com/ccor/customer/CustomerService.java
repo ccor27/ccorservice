@@ -2,6 +2,8 @@ package com.ccor.customer;
 
 import org.springframework.stereotype.Service;
 
+import java.util.List;
+
 @Service
 public record CustomerService(CustomerRepository customerRepository) {
 
@@ -14,5 +16,9 @@ public record CustomerService(CustomerRepository customerRepository) {
 
         customerRepository.save(customer);
 
+    }
+
+    public List<Customer> findAll(){
+        return customerRepository.findAll();
     }
 }

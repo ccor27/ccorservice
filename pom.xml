@@ -50,6 +50,7 @@
 
 	<build>
 		<plugins>
+
 			<plugin>
 				<groupId>org.springframework.boot</groupId>
 				<artifactId>spring-boot-maven-plugin</artifactId>
@@ -60,6 +61,7 @@
 							<artifactId>lombok</artifactId>
 						</exclude>
 					</excludes>
+
 				</configuration>
 			</plugin>
 			<plugin>
@@ -70,7 +72,21 @@
 					<target>17</target>
 				</configuration>
 			</plugin>
-		</plugins>
-	</build>
+        </plugins>
+
+        <pluginManagement>
+                         <plugins>
+                             <plugin>
+                                 <groupId>org.apache.maven.plugins</groupId>
+                                 <artifactId>maven-compiler-plugin</artifactId>
+                                 <version>3.5.1</version>
+                                 <configuration>
+                                     <!-- put your configurations here -->
+                                 </configuration>
+                             </plugin>
+                         </plugins>
+
+        </pluginManagement>
+    </build>
 
 </project>
